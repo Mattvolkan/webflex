@@ -220,10 +220,6 @@ section {
     padding: 15px 4%;
     transition: .2s;
   }
-  section{
-    padding: 0 4%;
-    transition: .2s;
-  }
   .share{
     left: 4%;
     transition: .2s;
