@@ -12,7 +12,7 @@
   --tex-color: #fff;
   --main-color: #ffae00;
 
-  --big-font: 3rem;
+  --big-font: 6rem;
   --p-font: 1.1rem;
 }
 
@@ -314,16 +314,4 @@ section {
 .home-img img{
   animation: imgg 2s ease-in-out infinite;
   animation-delay: 2s;
-}
-
-@keyframes imgg {
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(-22px);
-  }
-  100%{
-    transform: translateY(0);
-  }
 }
