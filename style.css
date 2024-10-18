@@ -209,7 +209,7 @@ section {
   text-align: left;
   color: var(--tex-color);
   font-size: 42px;
-  margin: 0.1em 0 1em;
+  margin: 0 0 1em;
 }
 
 .acerca-contenido h3{
@@ -227,7 +227,7 @@ section {
 .acerca-contenido p{
   color: var(--tex-color);
   font-size: 20px;
-  margin: 2em 0 3em;
+  margin: 1em 0 2em;
 }
 
 
@@ -493,17 +493,26 @@ section {
     display: block;
   }
 
-   .acerca-contenido h2{
-    font-size: 35px;
+  .acerca-contenido h2{
+    font-size: 25px;
   }
   .acerca-contenido h3{
     font-size: 18px;
   }
   .acerca-contenido p{
-    font-size: 20px;
+    order: 2;
+    font-size: 18px;
+  }
+
+  .acerca-img{
+    margin: auto;
+    height: auto;
+    width: auto;
   }
   .acerca-img img{
-    width: 400px;
+    max-width: 900px;
+    width: 180%;
+    height: auto;
   }
 }
 
@@ -536,18 +545,22 @@ section {
     display: block;
   }
 
-
-
-  
    .acerca-contenido h2{
+    align-items: center;
+    left: -180px;
     font-size: 25px;
   }
   .acerca-contenido h3{
-    font-size: 18px;
+    position: relative;
+    left: -70px;
+    font-size: 20px;
   }
   .acerca-contenido p{
-    order: 2;
-    font-size: 20px;
+    position: relative;
+    text-align: center;
+    left: -70px;
+    text-align: left;
+    font-size: 22px;
   }
 
   .acerca-img{
@@ -556,9 +569,14 @@ section {
     width: auto;
   }
   .acerca-img img{
+    display: none;
     max-width: 900px;
     width: 300%;
     height: auto;
+  }
+  .acerca-contenido a{
+    position: relative;
+    left: -31px;
   }
 }
 
