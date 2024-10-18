@@ -322,15 +322,8 @@ section {
     transform: translateY(-100%); /* Ocultamos la navbar por defecto */
     transition: transform 0.3s ease-in-out;
   }
-  
   .navbar.show {
     transform: translateY(0);
-  }
-  
-  .menu-btn {
-    position: relative;
-    margin-top: -800px;
-    right: -20px;
   }
 
 }
@@ -339,8 +332,12 @@ section {
     position: relative;
   }
 
-  .navbar{
-    padding: 15px 20px;
+  .navbar a{
+    display: block;
+    padding: 0px;
+    margin: 0px 0px 40px 0px;
+    font-size: 2rem;
+    font-weight: 400;
   }
 
   .navbar ul {
@@ -358,12 +355,15 @@ section {
     position: relative;
   }
 
+  .navbar a{
+    display: block;
+    padding: 0px;
+    margin: 0px 0px 50px 0px;
+    font-size: 2rem;
+    font-weight: 400;
+  }
   .navbar ul {
     flex-direction: column;
-  }
-
-  .navbar li:not(.menu-button) {
-    display: flex; /* Oculta los demás elementos en dispositivos móviles */
   }
 }
 
