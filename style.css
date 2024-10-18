@@ -306,17 +306,6 @@ section {
   }
 }
 
-@media (max-width: 500px){  
-  :root{
-    --big-font: 4rem;
-    --p-font: 15rem;
-    transition: .2s;
-  }
-  .btn{
-    padding: 9px 28px;
-  }
-}
-
 .home-img img{
   animation: imgg 2s ease-in-out infinite;
   animation-delay: 2s;
