@@ -305,30 +305,65 @@ section {
   }
 }
 @media (max-width: 850px){
-  .navbar{
-    position: absolute;
+  .navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
     height: 100vh;
     padding: 40px 50px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 999;
     display: flex;
     flex-direction: column;
-    background: #2d2d2d;
-    transition: all 0.4s ease-in-out;
+    transform: translateY(-100%); /* Ocultamos la navbar por defecto */
+    transition: transform 0.3s ease-in-out;
   }
-  .navbar a{
-    display: block;
-    color: #c3c3c3;
-    padding: 0px;
-    margin: 0px 0px 40px 0px;
-    font-size: 2rem;
-    font-weight: 400;
+  
+  .navbar.show {
+    transform: translateY(0);
   }
-  .navbar.open{
-    left: 0;
+  
+  .menu-btn {
+    position: relative;
+    margin-top: -800px;
+    right: -20px;
+  }
+
+}
+@media (max-width: 850px) {
+  .container {
+    position: relative;
+  }
+
+  .navbar{
+    padding: 15px 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li:not(.menu-button) {
+    display: flex; /* Oculta los demás elementos en dispositivos móviles */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    position: relative;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li:not(.menu-button) {
+    display: flex; /* Oculta los demás elementos en dispositivos móviles */
   }
 }
 
