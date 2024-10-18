@@ -46,8 +46,22 @@ header {
   color: var(--main-color);
 }
 
+nav ul{
+  display: none;
+}
+
+nav li{
+  display: inline-block;
+}
+
+
+.navbar.show{
+  display: block;
+  animation: slideDown 0.5s ease-in-out;
+}
+
 .navbar {
-  display: flex;
+  display: none;
 }
 
 .navbar a {
@@ -78,6 +92,18 @@ header {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.menu-btn button{
+  background: transparent;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
 }
 
 #menu-icon {

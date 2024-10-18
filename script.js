@@ -1,7 +1,6 @@
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+let introButton = document.getElementById('intro');
+let navMenu = document.querySelector('nav ul');
 
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toogle('open')
-};
+introButton.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
