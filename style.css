@@ -512,6 +512,57 @@ section {
   animation-delay: 2s;
 }
 
+@media (max-width: 431px){
+  .container {
+    position: relative;
+  }
+
+  .navbar a{
+    display: block;
+    padding: 0px;
+    margin: 0px 0px 30px 0px;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .menu-btn{
+    display: block;
+  }
+
+  #menu-icon{
+    display: block;
+  }
+
+
+
+  
+   .acerca-contenido h2{
+    font-size: 25px;
+  }
+  .acerca-contenido h3{
+    font-size: 18px;
+  }
+  .acerca-contenido p{
+    order: 2;
+    font-size: 20px;
+  }
+
+  .acerca-img{
+    margin: auto;
+    height: auto;
+    width: auto;
+  }
+  .acerca-img img{
+    max-width: 900px;
+    width: 300%;
+    height: auto;
+  }
+}
+
+
 @keyframes imgg {
   0%{
     transform: translateY(0);
