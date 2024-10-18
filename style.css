@@ -191,6 +191,56 @@ section {
   border: 2px solid var(--tex-color);
 }
 
+/*Sobre mi*/
+.acerca{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12% 8%;
+  gap: 10em;
+  background: black;
+}
+
+.acerca-img{
+  position: relative;
+  width: 550px;
+  box-shadow: 0 0 25px orange,
+              0 0 50px yellow;
+}
+
+.acerca-img img{
+  width: 550px;
+}
+
+.acerca-contenido h2{
+  text-align: left;
+  color: var(--tex-color);
+  font-size: 42px;
+  margin: 0.1em 0 1em;
+}
+
+.acerca-contenido h3{
+  font-size: 62px;
+  color: white;
+}
+.mi{
+  color: var(--main-color);
+}
+
+.comp{
+  color: var(--main-color);
+}
+
+.acerca-contenido p{
+  color: var(--tex-color);
+  font-size: 20px;
+  margin: 2em 0 3em;
+}
+
+
+
+
+/*Socia*/
 .share{
   position: absolute;
   bottom: 3rem;
@@ -235,6 +285,24 @@ section {
     padding: 0 8%;
     transition: .2s;
   }
+
+  .acerca{
+    padding: 15px 8%;
+  }
+
+  .acerca-contenido h2{
+    font-size: 35px;
+  }
+  .acerca-contenido h3{
+    font-size: 18px;
+  }
+  .acerca-contenido p{
+    font-size: 20px;
+  }
+  .acerca-img img{
+    width: 400px;
+  }
+
   .share{
     left: 8%;
     transition: .2s;
@@ -319,7 +387,6 @@ section {
     background: #2d2d2d;
     transition: all 0.4s ease-in-out;
   }
-
 }
 
 
@@ -340,8 +407,10 @@ section {
     flex-direction: column;
     transform: translateY(-100%); /* Ocultamos la navbar por defecto */
     transition: transform 0.3s ease-in-out;
-  }
 
+    
+  }
+  
   .navbar a{
     display: block;
     color: #c3c3c3;
@@ -387,6 +456,22 @@ section {
     display: block;
   }
 
+  .acerca{
+    padding: 15px 4%;
+  }
+
+  .acerca-contenido h2{
+    font-size: 30px;
+  }
+  .acerca-contenido h3{
+    font-size: 15px;
+  }
+  .acerca-contenido p{
+    font-size: 15px;
+  }
+  .acerca-img img{
+    width: 300px;
+  }
 }
 
 
@@ -412,6 +497,23 @@ section {
 
   #menu-icon{
     display: block;
+  }
+
+  .acerca{
+    padding: 15px 4%;
+  }
+
+  .acerca-contenido h2{
+    font-size: 25px;
+  }
+  .acerca-contenido h3{
+    font-size: 15px;
+  }
+  .acerca-contenido p{
+    font-size: 13px;
+  }
+  .acerca-img img{
+    width: 270px;
   }
 }
 

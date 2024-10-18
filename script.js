@@ -19,7 +19,7 @@ const sr = ScrollReveal ({
   reset: true
 });
 
-sr.reveal('.logo',{delay:200, origin: 'left'});
+sr.reveal('.logo',{delay:150, origin: 'left'});
 sr.reveal('.menu-btn',{delay:520, origin: 'right'});
 sr.reveal('.home-text',{delay:600, origin: 'top'});
 sr.reveal('.home-text p',{delay:650, origin: 'left'});
