@@ -201,13 +201,6 @@ section {
   background: black;
 }
 
-.acerca-img{
-  position: relative;
-  width: 550px;
-  box-shadow: 0 0 25px orange,
-              0 0 50px yellow;
-}
-
 .acerca-img img{
   width: 550px;
 }
@@ -240,7 +233,7 @@ section {
 
 
 
-/*Socia*/
+/*Social*/
 .share{
   position: absolute;
   bottom: 3rem;
@@ -278,9 +271,10 @@ section {
 /* Ajustes de pantalla */
 @media (max-width: 1850px){
   header{
-    padding: 15px 8%;
+    padding: 15px 10%;
     transition: .2s;
   }
+
   section{
     padding: 0 8%;
     transition: .2s;
@@ -499,21 +493,17 @@ section {
     display: block;
   }
 
-  .acerca{
-    padding: 15px 4%;
-  }
-
-  .acerca-contenido h2{
-    font-size: 25px;
+   .acerca-contenido h2{
+    font-size: 35px;
   }
   .acerca-contenido h3{
-    font-size: 15px;
+    font-size: 18px;
   }
   .acerca-contenido p{
-    font-size: 13px;
+    font-size: 20px;
   }
   .acerca-img img{
-    width: 270px;
+    width: 400px;
   }
 }
 
