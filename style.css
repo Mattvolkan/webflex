@@ -305,6 +305,25 @@ section {
   }
 }
 @media (max-width: 850px){
+  .navbar{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 40px 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100;
+    display: flex;
+    flex-direction: column;
+    background: #2d2d2d;
+    transition: all 0.4s ease-in-out;
+  }
+
+}
+
+
+@media (max-width: 850px){
   .navbar {
     position: fixed;
     top: 0;
@@ -321,6 +340,18 @@ section {
     flex-direction: column;
     transform: translateY(-100%); /* Ocultamos la navbar por defecto */
     transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar a{
+    display: block;
+    color: #c3c3c3;
+    padding: 0px;
+    margin: 0px 0px 40px 0px;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .navbar.open{
+    left: 0;
   }
   .navbar.show {
     transform: translateY(0);
@@ -344,9 +375,18 @@ section {
     flex-direction: column;
   }
 
-  .navbar li:not(.menu-button) {
-    display: flex; /* Oculta los demás elementos en dispositivos móviles */
+  .navbar li{
+    display: flex;
   }
+
+  .menu-btn{
+    display: block;
+  }
+
+  #menu-icon{
+    display: block;
+  }
+
 }
 
 
@@ -364,6 +404,14 @@ section {
   }
   .navbar ul {
     flex-direction: column;
+  }
+
+  .menu-btn{
+    display: block;
+  }
+
+  #menu-icon{
+    display: block;
   }
 }
 
