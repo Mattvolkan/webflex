@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cristian Reyna</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><span>C</span>ristian</a>
+      <nav>
+        <ul class="navbar" id="navbar">
+          <li><a href="#home" class="active">Inicio</a></li>
+          <li><a href="#sobre-mi">Acerca</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="menu-btn">
+        <span>Menu</span>
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-text">
+        <span class="a">Auxiliar de Sistemas Informaticos</span>
+        <h1>Cristian Reina</h1>
+        <p>
+          Experto en redes, mantenimiento de equipos informaticos, instalacion
+          de camaras de seguridad. Me apasiona mantener tus sistemas
+          actualizados y protegidos, garantizando un entorno de trabajo
+          eficiente y seguro.
+        </p>
+        <div class="main-btn">
+          <a href="#" class="btn">Descarga HV</a>
+          <a href="#contacto" class="btn dos"><span class="c">C</span>ontactar</a>
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="img/it-support.svg" alt="IT Support" />
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="acerca">
+      <div class="acerca-img">
+        <img src="img/sistemas.png" alt="Sistemas" />
+      </div>
+
+      <div class="acerca-contenido">
+        <h2 class="cabeza">Sobre <span class="mi">Mi</span></h2>
+        <h3>Mantenimiento a equipos de <span class="comp">Computo</span></h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+          commodi minima vitae eum, perferendis vero vel nam magnam ipsum unde
+          tempora veniam omnis error nihil praesentium debitis ratione sapiente
+          maiores!
+        </p>
+        <a href="#" class="btn">Experiencia</a>
+      </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+      <h2 class="section-title">Mis <span>Servicios</span></h2>
+      <div class="servicios-container">
+        <div class="servicio-card">
+          <i class="bx bx-laptop"></i>
+          <h3>Mantenimiento de Computadoras / Soporte técnico</h3>
+          <p>
+            Ofrezco servicios de mantenimiento preventivo y correctivo para tu
+            equipo, así como soporte técnico para resolver cualquier problema
+            informático.
+          </p>
+        </div>
+        <div class="servicio-card">
+          <i class="bx bx-network-chart"></i>
+          <h3>Instalación / Reparación de Redes</h3>
+          <p>
+            Diseño, instalación y reparación de redes para hogares y empresas,
+            garantizando una conexión estable y segura.
+          </p>
+        </div>
+        <div class="servicio-card">
+          <i class="bx bx-cctv"></i>
+          <h3>Instalación de Cámaras de Seguridad</h3>
+          <p>
+            Implementación de sistemas de vigilancia con cámaras de seguridad de
+            última generación para proteger tu hogar o negocio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="galeria">
+      <h2 class="section-title">Nuestra <span>Galería</span></h2>
+      <div class="galeria-container">
+          <div class="galeria-item">
+              <img src="img/mantenimiento.jpg" alt="Mantenimiento de computadoras" />
+              <div class="galeria-overlay">
+                  <h3>Mantenimiento de Computadoras</h3>
+              </div>
+          </div>
+          <div class="galeria-item">
+              <img src="img/soporte.jpg" alt="Soporte técnico" />
+              <div class="galeria-overlay">
+                  <h3>Soporte Técnico</h3>
+              </div>
+          </div>
+          <div class="galeria-item">
+              <img src="img/redes.jpg" alt="Instalación de redes" />
+              <div class="galeria-overlay">
+                  <h3>Instalación de Redes</h3>
+              </div>
+          </div>
+          <div class="galeria-item">
+              <img src="img/reparacion-redes.jpg" alt="Reparación de redes" />
+              <div class="galeria-overlay">
+                  <h3>Reparación de Redes</h3>
+              </div>
+          </div>
+          <div class="galeria-item">
+              <img src="img/camara.jpg" alt="Instalación de cámaras de seguridad" />
+              <div class="galeria-overlay">
+                  <h3>Instalación de Cámaras de Seguridad</h3>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2 class="section-title">Contáctame</h2>
+    <div class="contacto-container">
+        <form id="contactForm" class="contacto-form">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+        <div class="contacto-info">
+            <h3>¿Prefieres una respuesta rápida?</h3>
+            <p>Contáctame directamente por WhatsApp:</p>
+            <a href="https://wa.me/+573205786766" target="_blank" class="btn whatsapp-btn">
+                <i class='bx bxl-whatsapp'></i> Chatear en WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+    <div class="share">
+      <p>Mira mi:</p>
+
+      <div class="social">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-tiktok"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+      </div>
+    </div>
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Volver al inicio">
+      <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
