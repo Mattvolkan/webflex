@@ -77,7 +77,7 @@ window.addEventListener('scroll', () => {
 
 const sr = ScrollReveal({
   distance: '40px',
-  duration: 2500,
+  duration: 1000,
   reset: true
 });
 
@@ -142,12 +142,46 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Manejo del formulario de contacto
+//formulario
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
-  alert('Gracias por tu mensaje. Te contactaremos pronto!');
-  this.reset(); // Limpia el formulario después de enviarlo
+  // Obtener los datos del formulario
+  const formData = new FormData(this);
+
+  // Enviar los datos a Formspree
+  fetch(this.action, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      // Mostrar el modal
+      document.getElementById('thankYouModal').style.display = 'block';
+      document.body.classList.add('modal-open');
+      this.reset(); // Limpia el formulario después de enviarlo
+    } else {
+      alert('Oops! Hubo un problema al enviar el mensaje. Por favor, intenta de nuevo.');
+    }
+  }).catch(error => {
+    alert('Oops! Hubo un problema al enviar el mensaje. Por favor, intenta de nuevo.');
+  });
+});
+
+// Cerrar el modal
+document.getElementById('closeModal').addEventListener('click', function() {
+  document.getElementById('thankYouModal').style.display = 'none';
+  document.body.classList.remove('modal-open');
+});
+
+// Cerrar el modal si se hace clic fuera de él
+window.addEventListener('click', function(event) {
+  if (event.target == document.getElementById('thankYouModal')) {
+    document.getElementById('thankYouModal').style.display = 'none';
+    document.body.classList.remove('modal-open');
+  }
 });
 
 // Botón de volver arriba
@@ -176,12 +210,30 @@ window.addEventListener('scroll', () => {
   }
 });
 
+
+function updateShareVisibility() {
+  const contactSection = document.getElementById('contacto');
+  const shareElement = document.querySelector('.share');
+  
+  if (contactSection && shareElement) {
+    const contactRect = contactSection.getBoundingClientRect();
+    const isContactVisible = contactRect.top < window.innerHeight && contactRect.bottom >= 0;
+    
+    if (isContactVisible) {
+      shareElement.style.display = 'none';
+    } else {
+      shareElement.style.display = 'flex';
+    }
+  }
+}
+
+window.addEventListener('scroll', updateShareVisibility);
+
+updateShareVisibility();
+
 sr.reveal('.logo', { delay: 150, origin: 'left' });
 sr.reveal('.menu-btn', { delay: 520, origin: 'right' });
-sr.reveal('.home-text', { delay: 600, origin: 'top' });
-sr.reveal('.home-text p', { delay: 650, origin: 'left' });
-sr.reveal('.home-text h1', { delay: 680, origin: 'left' });
+sr.reveal('.home', { delay: 680, origin: 'left' });
 sr.reveal('.main-btn', { delay: 610, origin: 'right' });
 sr.reveal('.home-img', { delay: 600, origin: 'right' });
-sr.reveal('.share p', { delay: 600, origin: 'right' });
-sr.reveal('.social', { delay: 600, origin: 'left' });
+sr.reveal('.share', { delay: 600, origin: 'right' });

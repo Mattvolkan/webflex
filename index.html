@@ -140,28 +140,35 @@
   <section id="contacto" class="contacto">
     <h2 class="section-title">Contáctame</h2>
     <div class="contacto-container">
-        <form id="contactForm" class="contacto-form">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-            </div>
-            <button type="submit" class="btn">Enviar Mensaje</button>
-        </form>
+      <form id="contactForm" class="contacto-form" action="https://formspree.io/f/xvgogbgv" method="POST">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar Mensaje</button>
+    </form>
         <div class="contacto-info">
             <h3>¿Prefieres una respuesta rápida?</h3>
             <p>Contáctame directamente por WhatsApp:</p>
-            <a href="https://wa.me/+573106431621" target="_blank" class="btn whatsapp-btn">
+            <a href="https://wa.me/+573205786766" target="_blank" class="btn whatsapp-btn">
                 <i class='bx bxl-whatsapp'></i> Chatear en WhatsApp
             </a>
         </div>
+    </div>
+    <div id="thankYouModal" class="modal">
+      <div class="modal-content">
+        <h2>¡Gracias por tu mensaje!</h2>
+        <p>Te contactaremos pronto.</p>
+        <button id="closeModal" class="btn">Cerrar</button>
+      </div>
     </div>
 </section>
 

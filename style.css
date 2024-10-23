@@ -388,11 +388,17 @@ section {
   color: var(--main-color);
 }
 
+.contacto h2::first-letter{
+  color: var(--main-color);
+}
 .contacto-info p {
   margin-bottom: 1.5rem;
   color: var(--text-color);
 }
 
+.contacto button{
+  cursor: pointer;
+}
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
@@ -409,6 +415,43 @@ section {
 .whatsapp-btn i {
   margin-right: 0.5rem;
   font-size: 1.2rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+  border: 1px solid #3b3b3b;
+  border-radius: 10px;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal h2 {
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.modal p {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
