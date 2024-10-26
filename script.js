@@ -36,10 +36,8 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
-    // Remover la clase 'active' de todos los enlaces
     document.querySelectorAll('.navbar a').forEach(link => link.classList.remove('active'));
 
-    // Añadir la clase 'active' al enlace clicado
     this.classList.add('active');
 
     const targetId = this.getAttribute('href').substring(1);
@@ -47,7 +45,7 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
 
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop - 80, // Ajusta este valor según el tamaño de tu header
+        top: targetElement.offsetTop - 80, 
         behavior: 'smooth'
       });
     }
@@ -81,6 +79,32 @@ const sr = ScrollReveal({
   reset: true
 });
 
+// Obtener el modal
+var modal = document.getElementById("experienciaModal");
+
+// Obtener el botón que abre el modal
+var btn = document.querySelector(".acerca-contenido .btn");
+
+// Obtener el elemento <span> que cierra el modal
+var span = document.getElementsByClassName("close")[0];
+
+// Cuando el usuario hace clic en el botón, abrir el modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Cuando el usuario hace clic en <span> (x), cerrar el modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Cuando el usuario hace clic fuera del modal, cerrarlo
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 // Animaciones para la sección de Servicios
 sr.reveal('.section-title', { delay: 400, origin: 'top' });
 sr.reveal('.servicio-card', { delay: 400, origin: 'bottom', interval: 200 });
@@ -100,6 +124,60 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Juan Pérez",
+    role: "Gerente de TI",
+    content: "El servicio de Cristian fue excepcional. Resolvió nuestros problemas de red rápidamente y de manera profesional.",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "María González",
+    role: "Dueña de Negocio",
+    content: "La instalación de cámaras de seguridad fue impecable. Me siento mucho más tranquila con mi negocio ahora.",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Carlos Rodríguez",
+    role: "Desarrollador Freelance",
+    content: "Cristian hizo un excelente trabajo configurando mi estación de trabajo. Su conocimiento técnico es impresionante.",
+    rating: 4
+  }
+];
+
+let currentIndex = 0;
+
+function updateTestimonial() {
+  const testimonial = testimonials[currentIndex];
+  document.getElementById('testimonioContent').textContent = testimonial.content;
+  document.getElementById('testimonioName').textContent = testimonial.name;
+  document.getElementById('testimonioRole').textContent = testimonial.role;
+  
+  const ratingHTML = Array(5).fill('★').map((star, i) => 
+    `<span class="${i < testimonial.rating ? 'star filled' : 'star'}">${star}</span>`
+  ).join('');
+  document.getElementById('testimonioRating').innerHTML = ratingHTML;
+}
+
+function nextTestimonial() {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  updateTestimonial();
+}
+
+function prevTestimonial() {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  updateTestimonial();
+}
+
+document.getElementById('nextTestimonial').addEventListener('click', nextTestimonial);
+document.getElementById('prevTestimonial').addEventListener('click', prevTestimonial);
+
+updateTestimonial();
+setInterval(nextTestimonial, 5000);
 
 // Animaciones para la sección de Galería
 sr.reveal('.galeria .section-title', { delay: 400, origin: 'top' });
@@ -231,9 +309,3 @@ window.addEventListener('scroll', updateShareVisibility);
 
 updateShareVisibility();
 
-sr.reveal('.logo', { delay: 150, origin: 'left' });
-sr.reveal('.menu-btn', { delay: 520, origin: 'right' });
-sr.reveal('.home', { delay: 680, origin: 'left' });
-sr.reveal('.main-btn', { delay: 610, origin: 'right' });
-sr.reveal('.home-img', { delay: 600, origin: 'right' });
-sr.reveal('.share', { delay: 600, origin: 'right' });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cristian Reyna</title>
+    <title>Cristian Reina</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -44,11 +44,16 @@
         </p>
         <div class="main-btn">
           <a href="#" class="btn">Descarga HV</a>
-          <a href="#contacto" class="btn dos"><span class="c">C</span>ontactar</a>
+          <a href="#contacto" class="btn dos"
+            ><span class="c">C</span>ontactar</a
+          >
         </div>
       </div>
       <div class="home-img">
-        <img src="img/it-support.svg" alt="IT Support" />
+        <img
+          src="img/37783142-04d6-41c9-8221-d0b0bdea5884-removebg-preview.png"
+          alt="IT Support"
+        />
       </div>
     </section>
 
@@ -59,14 +64,41 @@
 
       <div class="acerca-contenido">
         <h2 class="cabeza">Sobre <span class="mi">Mi</span></h2>
-        <h3>Mantenimiento a equipos de <span class="comp">Computo</span></h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          commodi minima vitae eum, perferendis vero vel nam magnam ipsum unde
-          tempora veniam omnis error nihil praesentium debitis ratione sapiente
-          maiores!
+          Soy Cristian Reina, un joven profesional de 19 años con una sólida
+          formación en sistemas informáticos. Mi trayectoria académica incluye
+          un bachillerato y un técnico en auxiliar de sistemas, lo que me ha
+          brindado las bases necesarias para desempeñarme con éxito en el ámbito
+          tecnológico.
         </p>
         <a href="#" class="btn">Experiencia</a>
+      </div>
+
+      <div id="experienciaModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Mi Experiencia</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Bachillerato</h3>
+                <p>Graduado de la escuela secundaria</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Técnico en Auxiliar de Sistemas Informáticos</h3>
+                <p>Estudios técnicos completados</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Prácticas</h3>
+                <p>Upasistem</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -101,76 +133,116 @@
       </div>
     </section>
 
-    <section id="galeria" class="galeria">
-      <h2 class="section-title">Nuestra <span>Galería</span></h2>
-      <div class="galeria-container">
-          <div class="galeria-item">
-              <img src="img/mantenimiento.jpg" alt="Mantenimiento de computadoras" />
-              <div class="galeria-overlay">
-                  <h3>Mantenimiento de Computadoras</h3>
-              </div>
+    <section id="testimonios" class="testimonios">
+      <h2 class="section-title">Testi<span>monios</span></h2>
+      <div class="testimonios-container">
+        <button
+          id="prevTestimonial"
+          class="carousel-button prev"
+          aria-label="Testimonio anterior"
+        >
+          <i class="bx bx-chevron-left"></i>
+        </button>
+        <div id="testimonioCard" class="testimonio-card">
+          <p id="testimonioContent" class="testimonio-content"></p>
+          <div class="testimonio-info">
+            <h3 id="testimonioName" class="testimonio-name"></h3>
+            <p id="testimonioRole" class="testimonio-role"></p>
           </div>
-          <div class="galeria-item">
-              <img src="img/soporte.jpg" alt="Soporte técnico" />
-              <div class="galeria-overlay">
-                  <h3>Soporte Técnico</h3>
-              </div>
-          </div>
-          <div class="galeria-item">
-              <img src="img/redes.jpg" alt="Instalación de redes" />
-              <div class="galeria-overlay">
-                  <h3>Instalación de Redes</h3>
-              </div>
-          </div>
-          <div class="galeria-item">
-              <img src="img/reparacion-redes.jpg" alt="Reparación de redes" />
-              <div class="galeria-overlay">
-                  <h3>Reparación de Redes</h3>
-              </div>
-          </div>
-          <div class="galeria-item">
-              <img src="img/camara.jpg" alt="Instalación de cámaras de seguridad" />
-              <div class="galeria-overlay">
-                  <h3>Instalación de Cámaras de Seguridad</h3>
-              </div>
-          </div>
+          <div id="testimonioRating" class="testimonio-rating"></div>
+        </div>
+        <button
+          id="nextTestimonial"
+          class="carousel-button next"
+          aria-label="Siguiente testimonio"
+        >
+          <i class="bx bx-chevron-right"></i>
+        </button>
       </div>
-  </section>
+    </section>
 
-  <section id="contacto" class="contacto">
-    <h2 class="section-title">Contáctame</h2>
-    <div class="contacto-container">
-      <form id="contactForm" class="contacto-form" action="https://formspree.io/f/xvgogbgv" method="POST">
-        <div class="form-group">
+    <section id="galeria" class="galeria">
+      <h2 class="section-title"><span>Galería</span></h2>
+      <div class="galeria-container">
+        <div class="galeria-item">
+          <img
+            src="img/mantenimiento.jpg"
+            alt="Mantenimiento de computadoras"
+          />
+          <div class="galeria-overlay">
+            <h3>Mantenimiento de Computadoras</h3>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="img/soporte.jpg" alt="Soporte técnico" />
+          <div class="galeria-overlay">
+            <h3>Soporte Técnico</h3>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="img/redes.jpg" alt="Instalación de redes" />
+          <div class="galeria-overlay">
+            <h3>Instalación de Redes</h3>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="img/reparacion-redes.jpg" alt="Reparación de redes" />
+          <div class="galeria-overlay">
+            <h3>Reparación de Redes</h3>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="img/camara.jpg" alt="Instalación de cámaras de seguridad" />
+          <div class="galeria-overlay">
+            <h3>Instalación de Cámaras de Seguridad</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2 class="section-title">Contáctame</h2>
+      <div class="contacto-container">
+        <form
+          id="contactForm"
+          class="contacto-form"
+          action="https://formspree.io/f/xvgogbgv"
+          method="POST"
+        >
+          <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div class="form-group">
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" required></textarea>
-        </div>
-        <button type="submit" class="btn">Enviar Mensaje</button>
-    </form>
+          </div>
+          <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
         <div class="contacto-info">
-            <h3>¿Prefieres una respuesta rápida?</h3>
-            <p>Contáctame directamente por WhatsApp:</p>
-            <a href="https://wa.me/+573205786766" target="_blank" class="btn whatsapp-btn">
-                <i class='bx bxl-whatsapp'></i> Chatear en WhatsApp
-            </a>
+          <h3>¿Prefieres una respuesta rápida?</h3>
+          <p>Contáctame directamente por WhatsApp:</p>
+          <a
+            href="https://wa.me/+573106431621"
+            target="_blank"
+            class="btn whatsapp-btn"
+          >
+            <i class="bx bxl-whatsapp"></i> Chatear en WhatsApp
+          </a>
         </div>
-    </div>
-    <div id="thankYouModal" class="modal">
-      <div class="modal-content">
-        <h2>¡Gracias por tu mensaje!</h2>
-        <p>Te contactaremos pronto.</p>
-        <button id="closeModal" class="btn">Cerrar</button>
       </div>
-    </div>
-</section>
+      <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+          <h2>¡Gracias por tu mensaje!</h2>
+          <p>Te contactaremos pronto.</p>
+          <button id="closeModal" class="btn">Cerrar</button>
+        </div>
+      </div>
+    </section>
 
     <div class="share">
       <p>Mira mi:</p>
@@ -183,8 +255,12 @@
       </div>
     </div>
 
-    <button id="scroll-to-top" class="scroll-to-top" aria-label="Volver al inicio">
-      <i class='bx bx-up-arrow-alt'></i>
+    <button
+      id="scroll-to-top"
+      class="scroll-to-top"
+      aria-label="Volver al inicio"
+    >
+      <i class="bx bx-up-arrow-alt"></i>
     </button>
 
     <script src="https://unpkg.com/scrollreveal"></script>
